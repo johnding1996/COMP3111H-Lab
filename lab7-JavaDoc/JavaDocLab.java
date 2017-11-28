@@ -90,9 +90,10 @@ public class JavaDocLab {
     /**
      * This method sort the students in a student list (parameter) by their student ID in alphabetical order.
      * @param studentList the student list.
+     * @return sorted studentList.
      */
-    public static void sortByStuId(List<Student> studentList) {
-
+    public static List<Student> sortByStuId(List<Student> studentList) {
+        return studentList.sort(Comparator.comparing(Student::getName));
     }
 
 
